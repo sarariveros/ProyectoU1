@@ -1,6 +1,8 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import prueba from './src/html/prueba.html?raw'
+import pruebajs from './src/js/prueba'
+
 import { setupCounter } from './counter.js'
 
  document.querySelector('#app').innerHTML = `
@@ -25,3 +27,5 @@ document.getElementById('app2').innerHTML = prueba
 
 
 setupCounter(document.querySelector('#counter'))
+
+pruebajs()
