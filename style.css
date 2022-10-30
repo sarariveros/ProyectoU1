@@ -1,4 +1,4 @@
-@import url('./src/css/vista_1.css');
-@import url('./src/css/vista_2.css');
-@import url('./src/css/vista_3.css');
-@import url('./src/css/vista_4.css');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
