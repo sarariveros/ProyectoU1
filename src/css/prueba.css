@@ -1,3 +1,6 @@
-.prueba {
-    color: red;
+table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
 }
