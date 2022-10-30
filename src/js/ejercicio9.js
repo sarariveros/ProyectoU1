@@ -10,7 +10,7 @@ function arreglo(str) {
 
     }
 
-    document.getElementById('result').innerHTML = suma
+    document.getElementById('result').innerHTML = 'La suma es ' + suma
 
 }
 
