@@ -1,3 +1,58 @@
-.v4_color{
-    color: pink;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.v4_h2 {
+    font: 2.5em/1 Open Sans, Impact;
+}
+
+.v4_content {
+
+    width: 500px;
+    margin: 60px auto;
+    font-family: sans-serif;
+    color: #213B4C;
+    margin: 150px auto;
+    width: 600px;
+    border-color: #aaaaaa;
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.v4_table {
+    font-family: arial, sans-serif;
+    table-layout: fixed;
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    border: 2px solid #0F362D;
+    width: 100%;
+}
+
+
+.v4_table thead {
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); */
+    background-color: #246355;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+
+
+.v4_table td {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 20px;
+}
+
+.v4_table th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 20px;
+}
+
+.v4_table tr:nth-child(even) {
+    background-color: #ddd;
 }

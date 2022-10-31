@@ -1,3 +1,33 @@
-.v3_color{
-    color: green;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.settings{
+    border: 2px solid black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+.settings div{
+    display: flex;
+    margin: 20px;
+}
+.settings div h4{
+    width: 70px;
+}
+button{
+    margin-left: 10px;
+    padding: 5px 17px;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+.btn-continue{
+    margin: auto;
+}
+button:disabled{
+    color: red;
+    border: 1px solid red;
 }
