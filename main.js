@@ -1,8 +1,9 @@
 import './style.css'
+import './src/css/union.css'
 
 // como modulo
-import iniciarEjercicio9 from './src/js/inicarEjercicio9'
+import iniciar from './src/js/iniciar'
 
 
 // iniciamos
-iniciarEjercicio9()
+iniciar()
