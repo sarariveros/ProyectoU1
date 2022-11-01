@@ -1,8 +1,6 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.boton-close{
+    text-align: end;
+    color: red;
 }
 .settings{
     border: 2px solid black;
