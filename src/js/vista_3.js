@@ -74,7 +74,7 @@ function setLigthMode() {
 }
 //para el sonido
 function playAudio() {
-    let btnAudio=document.getElementById("switch")
+/*     let btnAudio=document.getElementById("switch")
     let audio=document.getElementById("audio")
     btnAudio.addEventListener("change",()=>{
         let valorAudio=btnAudio.checked
@@ -84,6 +84,6 @@ function playAudio() {
         } else {
             audio.play();
     }
-    })
+    }) */
 }
 export {cambiar,cambiarNivel1,cambiarNivel2,cambiarNivel3,setDarkMode,setLigthMode,playAudio};

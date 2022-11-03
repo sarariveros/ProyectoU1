@@ -22,7 +22,7 @@ cambiarNivel2()
 cambiarNivel3()
 setDarkMode()
 setLigthMode()
-playAudio()
+//playAudio()
 
 iniciarVista4();
 iniciarVista1();
