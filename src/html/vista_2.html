@@ -12,65 +12,22 @@
             Nivel: <span id="v1_nivel">1</span>
         </div>
     </div>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
-        Tooltip on right
-      </button>
+
     <div class="v1_fila">
 
         <div class="v1_juego">
-            <div class="v1_cartas" id="cartas">
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  1</div>
-                    </div>
+
+            <div class="v1_cartas">
+                <div class="mascara" id="mascara">
+                    <p class="mensaje">Click en iniciar!</p>
                 </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
-                <div class="carta">                  
-                    <div class="carta-inner">
-                        <div class="carta-front"> click</div>
-                        <div class="carta-back">  2</div>
-                    </div>
-                </div>
+                <div class="contenido" id="cartas"></div>
             </div>
+
             <div class="v1_opciones">
-                <button class="v1_boton" id="v1_iniciar_o_pausar">Iniciar</button>
+                <button class="v1_boton" id="v1_iniciar_o_pausar" onclick="handleIniciar()">Iniciar</button>
             </div>
+
         </div>
 
         <div class="v1_menu">
