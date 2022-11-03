@@ -1,13 +1,24 @@
+:root {
+    --theme-primary: #e5e5e5;
+    --theme-secondary: #dad7cd;
+    --card-color: #f7c331;
+    --text-color: black;
+    --text-color-inverse:#fffffc;
+    --boton:#588157 ;
+    --color-2: #e8db7f;
+  }
+  
+ :root[data-theme="dark"] {
+    --theme-primary: #1f1f2d;
+    --theme-secondary: #333f4c;
+    --card-color: #df9a57;
+    --text-color: #e5e5e5;
+    --text-color-inverse:#0c1821;
+    --boton:#185339; 
+    color-scheme: dark; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-:root{
-    --color-1: #edcf5a;
-    --color-2: #e8db7f;
-    --color-3: #122865;
-    --color-4: #145b80;
-    --color-5: #15919a;
 }
