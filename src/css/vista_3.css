@@ -1,31 +1,74 @@
+.v3_container{
+    background-color: var(--theme-secondary);
+    color: var(--text-color);
+}
 .boton-close{
     text-align: end;
     color: red;
 }
 .settings{
-    border: 2px solid black;
-    padding: 30px;
+
+    padding: 20px;
     text-align: center;
     border-radius: 20px;
 }
 .settings div{
-    display: flex;
-    margin: 20px;
+    margin: 25px auto;
+   
 }
-.settings div h4{
-    width: 70px;
+.settings div h6{
+   font-size: medium;
+   font-weight: bold;
+    
 }
 button{
-    margin-left: 10px;
-    padding: 5px 17px;
-    cursor: pointer;
-    border-radius: 15px;
+    margin:5px 20px;
+    
 
+}
+.desing .btn-oscuro:hover{
+    background-color: transparent;
+    color: black;
 }
 .btn-continue{
     margin: auto;
+
 }
 button:disabled{
     color: red;
     border: 1px solid red;
+}
+/* 
+para la musica */
+.switch-container{
+    display: inline-block;
+    width: 70px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .5s;
+}
+.switch-container::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    left:4px ;
+    top: 4px;
+    transition-duration: .5s;
+}
+#switch{
+    display: none;
+}
+#switch:checked + .switch-container::after{
+    left: 35px;
+}
+#switch:checked + .switch-container{
+    background-color:#14213d ;
+    
 }

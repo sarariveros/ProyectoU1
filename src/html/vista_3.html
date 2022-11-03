@@ -1,33 +1,52 @@
 <div class="modal fade " id="ajustes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ajustesLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+    <div class="modal-dialog modal-lg  ">
+        <div class="modal-content v3_container">
         <div class="modal-body">
 
-    <!-- <p class="v3_color">3</p> -->
-    <button type="button" class="btn-close text-end" data-bs-dismiss="modal" aria-label="Close"></button>
+    
         <section class="settings">
+            <button type="button" class="btn-close position-absolute end-0 top-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
             <h2 id="titulo">
                 Ajustes
                 
             </h2>
             
-            <div class="level">
-                <h4>Nivel</h4>
-                <button onclick="cambiar()" id="btn-nivel">4 X 3</button>
-                <button>4 X 4</button>
-                <button>4 X 5</button>
+            <div >
+                <h6>Nivel</h6>
+                <div id="v3_niveles">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="2 X 2" id="nivel1" >
+                    Nivel 1
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="3 X 3" id="nivel2">
+                    Nivel 2
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="4 X 4" id="nivel3">
+                    Nivel 3
+                  </button>
+                </div> 
             </div>
             <div class="desing">
-                <h4>Diseño cambiado</h4>
-                <button>Claro</button>
-                <button>Oscuro</button>
+                <h6>Diseño </h6>
+                <button type="button" class="btn btn-outline-dark" id="btn-claro">
+                    Claro
+                  </button>
+                  <button type="button" class="btn btn-dark btn-oscuro" id="btn-oscuro" >
+                    Oscuro
+                  </button>
             </div>
             <div class="music">
-                <h4>Musica</h4>
-                <button>On</button>
-                <button>Off</button>
+              <h6>Musica</h6>
+              <div class="d-flex align-items-center justify-content-center">
+                <i class="bi bi-volume-up-fill fs-1"></i>
+                <input type="checkbox" name="" id="switch">
+                <label for="switch" class="mx-4 switch-container"></label>
+                <i class="bi bi-volume-mute-fill fs-1"></i>
+              </div>
             </div>
-            <button class="btn-continue">guardar</button>
+            
+              <button type="button" class="btn btn-success px-5 mt-3" >
+                Guardar
+              </button>
         </section>
         
         </div>

@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--theme-primary);
+    color: var(--text-color);
 }
 
 .v1_jugador {
@@ -45,7 +47,7 @@
 .carta {
     width: 140px;
     height: 160px;
-    background-color: #1e1e1e;    
+    background-color: var(--card-color);    
     border-radius: 5px;
     color: white;
     display: flex;
@@ -98,6 +100,8 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #1e1e1e;
+    background-color: var(--boton);
+    color: var(--text-color);
 }
 
 #v1_iniciar_o_pausar {
