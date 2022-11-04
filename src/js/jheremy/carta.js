@@ -1,3 +1,9 @@
+import { contarFallos, 
+    cambiarContenidoMascara, 
+    cambiarElEstadoDelJuego,
+    cambiarTextIniciar 
+} from "./funcinalidad";
+
 import agregarAlRanking from "./jugador";
 
 const DATA_ATRIBUTO_CARTA = 'data-volteado'
@@ -17,6 +23,10 @@ function clickCarta (id){
     if(verificarLasCartas(cartas) === false){
 
         voltearCartasYEliminarEstado(cartas)
+            .then(()=> {
+                contarFallos()
+            })
+
         return;
     }
 
@@ -35,19 +45,19 @@ function terminarJuego(){
     mostrarMensajeDeGanador()
 
     agregarAlRanking('v1_jugador', 'v1_tiempo', 'v1_nivel')
+
+    cambiarElEstadoDelJuego('Re-Inicio')
+
+    cambiarTextIniciar('Iniciar de nuevo')
+
 }
 
 function mostrarMensajeDeGanador(){
-    let mascara = document.getElementById('mascara')
 
-    let mensaje = mascara.querySelector('.mensaje')
+    cambiarContenidoMascara('Ganaste!')
 
-    mensaje.innerText = 'Ganaste!'
-
-    mascara.style.display = 'flex'
-
-    mascara.classList.add('ganador')
 }
+
 
 function verificarSiTerminoJuego(){
 
@@ -62,20 +72,27 @@ function verificarSiTerminoJuego(){
 
 function voltearCartasYEliminarEstado (cartas){
 
-    setTimeout(() => {
+    return new Promise((resolve, reject) =>{
 
-        for (let i = 0; i < cartas.length; i++) {
+        setTimeout(() => {
 
-            let cartaHTML = cartas[i]
+            for (let i = 0; i < cartas.length; i++) {
     
-            let cartaInnerHTML = cartaHTML.querySelector('.carta-inner')
-    
-            cartaInnerHTML.classList.remove('carta-inner-selecciondo')
-    
-            cartaHTML.removeAttribute(DATA_ATRIBUTO_CARTA)
-            
-        }
-    }, 1000)
+                let cartaHTML = cartas[i]
+        
+                let cartaInnerHTML = cartaHTML.querySelector('.carta-inner')
+        
+                cartaInnerHTML.classList.remove('carta-inner-selecciondo')
+        
+                cartaHTML.removeAttribute(DATA_ATRIBUTO_CARTA)
+                
+            }
+
+            resolve('cartas-volteadas')
+        }, 1000)
+
+    })
+
 
 }
 
