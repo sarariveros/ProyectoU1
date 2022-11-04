@@ -1,13 +1,3 @@
-
-function cambiar() {
-    const botonOscuro=document.getElementById("btn-oscuro")
-    botonOscuro.addEventListener("click",()=>{
-        document.body.style="background:red"
-    const tiempo=document.getElementById("v1_tiempo")
-    tiempo.style="color:red"
-    })
-    
-}
 function deshabilitar(btn ){
     //para obtener todos los botones
     let niveles=document.getElementById("v3_niveles")
@@ -86,4 +76,6 @@ function playAudio() {
     }
     })
 }
-export {cambiar,cambiarNivel1,cambiarNivel2,cambiarNivel3,setDarkMode,setLigthMode,playAudio};
+//para pausar el temporizador
+
+export {cambiarNivel1,cambiarNivel2,cambiarNivel3,setDarkMode,setLigthMode,playAudio};

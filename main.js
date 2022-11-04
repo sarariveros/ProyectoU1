@@ -7,7 +7,7 @@ import iniciarVista4 from './src/js/vista_4'
 import iniciarVista1 from './src/js/vista_1'
 import iniciar from './src/js/iniciar' // punto de entrada 
 import { iniciarJuego } from './src/js/jheremy'
-import {cambiarNivel1,cambiarNivel2,cambiarNivel3, playAudio, setDarkMode, setLigthMode} from "./src/js/vista_3";
+import {cambiarNivel1,cambiarNivel2,cambiarNivel3,  playAudio, setDarkMode, setLigthMode} from "./src/js/vista_3";
 
 // iniciamos templeta
 window.handleIniciar = iniciarJuego
@@ -15,6 +15,7 @@ window.handleIniciar = iniciarJuego
 // iniciamos
 iniciar()
 
+//vista2
 
 //vista 3
 cambiarNivel1()

@@ -1,5 +1,5 @@
 import clickCarta from "./carta"
-
+import { temporizador } from "../vista_2"
 const data = [
     {
         name: 'gato',
@@ -24,7 +24,7 @@ const data = [
 ]
 
 function iniciarJuego(){
-
+    temporizador()
     ocultarMascara()
 
     agregarCartas()
