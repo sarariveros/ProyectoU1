@@ -8,8 +8,6 @@ function agregarAlRanking(nombreTag, tiempoTag, nivelTag)
 
     const ranking = JSON.parse(localStorage.getItem('ranking'))?? []
 
-    console.log(ranking)
-
     ranking.push({nombre, tiempo, nivel})
 
     localStorage.setItem('ranking', JSON.stringify(ranking))

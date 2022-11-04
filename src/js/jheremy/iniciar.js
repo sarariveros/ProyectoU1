@@ -1,37 +1,23 @@
 import clickCarta from "./carta"
-
-const data = [
-    {
-        name: 'gato',
-        estado: 'no-volteado',
-        imagen: 'https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662__340.jpg',
-    },
-    {
-        name: 'zorro',
-        estado: 'no-volteado',
-        imagen: 'https://cdn.pixabay.com/photo/2015/04/10/01/41/fox-715588__340.jpg',
-    },
-    {
-        name: 'loro',
-        estado: 'no-volteado',
-        imagen: 'https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194__340.jpg',
-    },
-    {
-        name: 'delfin',
-        estado: 'no-volteado',
-        imagen: 'https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875__340.jpg',
-    },
-]
+import { cambiarElEstadoDelJuego, cambiarTextIniciar } from "./funcinalidad"
+import { obtenerDataPorNivel} from './data'
 
 function iniciarJuego(){
 
     ocultarMascara()
 
-    agregarCartas()
+    const data = obtenerDataPorNivel('v1_nivel')
+
+    agregarCartas(data)
+
+    cambiarTextIniciar('Pausar')
+
+    cambiarElEstadoDelJuego('Iniciado')
 
 }
 
-function agregarCartas(){
+
+function agregarCartas(data){
 
     const cartas = document.getElementById('cartas')
 
@@ -41,6 +27,14 @@ function agregarCartas(){
 
     let aleatorio = generarAleatorio(items)
 
+    let fragment = createFragment(aleatorio)
+
+    cartas.appendChild(fragment)
+
+}
+
+function createFragment(aleatorio)
+{
     let fragment = document.createDocumentFragment();
 
     for (let i = 0; i < aleatorio.length; i++) {
@@ -54,10 +48,8 @@ function agregarCartas(){
         fragment.appendChild(cartaHTML);
     }
 
-    cartas.appendChild(fragment)
-
+    return fragment
 }
-
 
 function crearCartaHTML(carta, index){
 
