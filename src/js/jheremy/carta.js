@@ -1,7 +1,9 @@
 import { contarFallos, 
     cambiarContenidoMascara, 
     cambiarElEstadoDelJuego,
-    cambiarTextIniciar 
+    cambiarTextIniciar, 
+    resetFallos,
+    resetTiempo
 } from "./funcinalidad";
 
 import agregarAlRanking from "./jugador";
@@ -42,13 +44,17 @@ function clickCarta (id){
 
 function terminarJuego(){
     
+    cambiarElEstadoDelJuego('ganado')
+
     mostrarMensajeDeGanador()
 
     agregarAlRanking('v1_jugador', 'v1_tiempo', 'v1_nivel')
 
-    cambiarElEstadoDelJuego('Re-Inicio')
-
     cambiarTextIniciar('Iniciar de nuevo')
+
+    resetFallos()
+
+    resetTiempo()
 
 }
 
