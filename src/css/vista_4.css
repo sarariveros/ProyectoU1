@@ -15,7 +15,7 @@
 .v4_content {
 
     font-family: sans-serif;
-    color: #213B4C;
+    color: var(--text-color);
 
     width: 600px;
     height: auto;

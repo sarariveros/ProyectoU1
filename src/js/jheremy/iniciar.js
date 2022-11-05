@@ -67,7 +67,7 @@ function crearCartaHTML(carta, index){
 
     cartaHTML.innerHTML = `
     <div class="carta-inner">
-        <div class="carta-front" ></div>
+        <div class="carta-front" ><i class="bi bi-suit-diamond-fill"></i></div>
         <div class="carta-back">
             <img src="${carta.imagen}"/>
         </div>
