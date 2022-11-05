@@ -1,5 +1,5 @@
 import clickCarta from "./carta"
-import { cambiarElEstadoDelJuego, cambiarTextIniciar } from "./funcinalidad"
+import { cambiarElEstadoDelJuego, cambiarTextIniciar, resetFallos, resetJuego, resetTiempo } from "./funcinalidad"
 import { obtenerDataPorNivel} from './data'
 
 function iniciarJuego(){
@@ -12,8 +12,14 @@ function iniciarJuego(){
 
     cambiarTextIniciar('Pausar')
 
-    cambiarElEstadoDelJuego('Iniciado')
+    cambiarElEstadoDelJuego('iniciado')
 
+    resetTiempo()
+
+    resetFallos()
+
+    fetch('https://api.lorem.space/image/face?w=150')
+        .then(x => console.log(x))
 }
 
 

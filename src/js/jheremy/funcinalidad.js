@@ -17,11 +17,8 @@ export function contarFallos(){
 export function cambiarElEstadoDelJuego(estado){
 
     window.estadoDelJuego = estado
-    console.log(estado);
+
     tiempo(estado)
-        
-    
-     
 }
 
 export function cambiarTextIniciar(texto){
@@ -38,13 +35,16 @@ export function resetJuego(){
     let fallos = document.getElementById('v1_fallos')
     fallos.innerHTML= "0"
 
-    cambiarElEstadoDelJuego('No-Iniciado')
-
-    let contenidoDeCartas = document.getElementById('cartas')
-
-    contenidoDeCartas.innerHTML = ""
+    cambiarElEstadoDelJuego('espera')
 
     cambiarContenidoMascara("Click en Iniciar!")
+
+    resetCartas()
+
+    resetFallos()
+
+    resetTiempo()
+
 }
 
 export function cambiarContenidoMascara(mensaje){
@@ -57,5 +57,34 @@ export function cambiarContenidoMascara(mensaje){
 
     mascara.style.display = 'flex'
 
-    mascara.classList.toggle('ganador')
+    if(window.estadoDelJuego && window.estadoDelJuego === 'ganado'){
+
+        mascara.classList.add('ganador')
+    }else {
+        
+        mascara.classList.remove('ganador')
+    }
+
+    
+
+}
+
+export function resetFallos(){
+    cambiarInnerText('v1_fallos', '0')
+}
+
+export function resetTiempo(){
+    cambiarInnerText('v1_tiempo', '00:00')
+}
+
+export function resetCartas() {
+
+    let contenidoDeCartas = document.getElementById('cartas')
+
+    contenidoDeCartas.innerHTML = ""
+}
+
+function cambiarInnerText(idHTML, text){
+
+    document.getElementById(idHTML).innerText = text
 }
