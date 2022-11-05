@@ -10,11 +10,26 @@ function iniciar() {
 
     // cargamos el html
     document.getElementById('vista_1').innerHTML = template1
+    document.getElementById('vista_1').style.display = 'none'
+
     document.getElementById('vista_2').innerHTML = template2
-    document.getElementById('vista_3').innerHTML = template3
-    document.getElementById('vista_4').innerHTML = template4
+    document.getElementById('vista_2').style.display = 'block'
+
+    //nosotros
     document.getElementById('vista_5').innerHTML = template5
+    document.getElementById('vista_5').style.display = 'none'
+
+    // modales
+    document.getElementById('vista_3').innerHTML = template3
     document.getElementById('vista_6').innerHTML = template6
+    document.getElementById('vista_4').innerHTML = template4
+
+    //click nosotros
+/*     document.getElementById('vista_5').innerHTML = template5
+
+    document.getElementById('vista_5').style.display = 'block'
+    document.getElementById('vista_2').style.display = 'none'
+    document.getElementById('vista_1').style.display = 'none' */
 
 }
 

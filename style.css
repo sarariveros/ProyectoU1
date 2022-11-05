@@ -25,3 +25,7 @@
 body{
     background-color: var(--theme-secondary);
 }
+
+.container {
+    min-height: 60vh;
+}
