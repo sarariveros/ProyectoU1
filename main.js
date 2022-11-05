@@ -16,6 +16,7 @@ window.resetJuego = resetJuego
 // iniciamos
 iniciar()
 
+//leear()
 
 //vista 3
 cambiarNivel1()
