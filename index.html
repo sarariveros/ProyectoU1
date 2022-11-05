@@ -1,28 +1,110 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sistemas - Juego de Memoria</title>
-  </head>
-  <body>
-    <a href="/profesor.html">profesor</a>
-    <audio id="audio"  src="https://cdn.pixabay.com/audio/2022/09/27/audio_2a84af0774.mp3" >
-      
-    </audio>
-    <div id="vista_1"></div>
-    <div id="vista_2"></div>
-    <div id="vista_3"></div>
-    <div id="vista_4"></div>
-    <div id="vista_5"></div>
-    <div id="vista_6"></div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <title>Sistemas - Juego de Memoria</title>
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="module" src="/main.js"></script>
-    
-  </body>
+<body>
+  <nav class="navbar navbar-expand-lg " style="background-color:var(--theme-primary)">
+    <div class="container-fluid">
+      <!-- https://github.com/sarariveros/ProyectoU1/blob/main/public/icon.png?raw=true -->
+      <i class="bi bi-nut" style="color: black;"></i><a class="navbar-brand" href="#">TechGamePeru</a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon  "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jugar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./src/html/vista_5.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ranking</a>
+          </li>
+          <!-- <li class="nav-item">
+                          <a class="nav-link disabled">Disabled</a>
+                      </li> -->
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <a href="/profesor.html">profesor</a>
+  <audio id="audio" src="https://cdn.pixabay.com/audio/2022/09/27/audio_2a84af0774.mp3">
+
+  </audio>
+  <div id="vista_1"></div>
+  <div id="vista_2"></div>
+  <div id="vista_3"></div>
+  <div id="vista_4"></div>
+  <div id="vista_5"></div>
+  <div id="vista_6"></div>
+  <footer class="bg-light text-center text-white mt-5">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+
+        <!-- Github -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #333333; font-size: 25px"
+          href="https://github.com/TechGamePeru" target="_blank" role="button"><i class="bi bi-github"></i></a>
+
+        <!-- Facebook -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #3b5998; font-size: 25px"
+          href="https://web.facebook.com/profile.php?id=100087671821555" target="_blank" role="button"><i
+            class="bi bi-facebook"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #55acee; font-size: 25px"
+          href="https://twitter.com/techgameperu" target="_blank" role="button"><i class="bi bi-twitter"></i></a>
+
+        <!-- Youtube -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39; font-size: 25px"
+          href="https://www.youtube.com/channel/UCtU_LRdDbpllEaaRmrZxtmA" target="_blank" role="button"><i
+            class="bi bi-youtube"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac; font-size: 25px"
+          href="https://www.instagram.com/techgameperu/" target="_blank" role="button"><i
+            class="bi bi-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn text-white btn-floating m-1" style="background-color: #0082ca; font-size: 25px;"
+          href="https://www.linkedin.com/in/techgameperu/" target="_blank" role="button"><i class="bi bi-linkedin"></a>
+
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(48, 44, 44, 0.2);">
+      © 2022 Derechos de Autor:
+      <a class="text-white" href="">TechGamePeru</a>
+    </div>
+    <!-- Copyright-->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="module" src="/main.js"></script>
+
+</body>
+
 </html>

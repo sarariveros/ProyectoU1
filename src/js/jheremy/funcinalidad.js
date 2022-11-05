@@ -1,3 +1,5 @@
+import { tiempo } from "./temporizador"
+
 export function contarFallos(){
 
     let contador = document.getElementById('v1_fallos').innerText
@@ -9,12 +11,14 @@ export function contarFallos(){
     document.getElementById('v1_fallos').innerText = contador
 
 }
+//variables para el temporizador
+
 
 export function cambiarElEstadoDelJuego(estado){
 
     window.estadoDelJuego = estado
 
-    console.log(estado)
+    tiempo(estado)
 }
 
 export function cambiarTextIniciar(texto){
@@ -23,8 +27,13 @@ export function cambiarTextIniciar(texto){
 }
 
 export function resetJuego(){
-
+    //para reiniciar el tiempo
+    let tiempo=document.getElementById("v1_tiempo")
+    tiempo.innerHTML="00:00 ";
     cambiarTextIniciar('Iniciar')
+    //para reiniciar los fallos
+    let fallos = document.getElementById('v1_fallos')
+    fallos.innerHTML= "0"
 
     cambiarElEstadoDelJuego('espera')
 

@@ -1,3 +1,4 @@
+import { resetJuego } from "./jheremy/funcinalidad"
 
 function cambiar() {
     const botonOscuro=document.getElementById("btn-oscuro")
@@ -30,6 +31,7 @@ function cambiarNivel1() {
     let nivel=document.getElementById("v1_nivel");
     btnNivel1.addEventListener("click",()=>{
         nivel.innerHTML=1
+        resetJuego()
         deshabilitar(btnNivel1)
         
     })
@@ -41,6 +43,7 @@ function cambiarNivel2() {
     let nivel=document.getElementById("v1_nivel");
     btnNivel2.addEventListener("click",()=>{
         nivel.innerHTML=2
+        resetJuego()
         deshabilitar(btnNivel2)
     })}
 
@@ -49,6 +52,7 @@ function cambiarNivel3() {
     let nivel=document.getElementById("v1_nivel");
     btnNivel3.addEventListener("click",()=>{
         nivel.innerHTML="3"
+        resetJuego()
         deshabilitar(btnNivel3)
     })
 }
