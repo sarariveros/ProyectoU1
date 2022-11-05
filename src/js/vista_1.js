@@ -13,6 +13,7 @@ const l_usu = [
 function iniciarVista1() {
     document.getElementById('result_pass').innerHTML = '';
 
+
     const select_rol = document.getElementById('rol');
     select_rol.addEventListener("change", activarPass);
     const btn_guardar = document.getElementById('btn-guardar');
@@ -37,8 +38,8 @@ function activarPass() {
 }
 function V1_guardar() {
     //limpiando
-    document.getElementById('result_pass').innerHTML = '';
-    document.getElementById('result_usu').innerHTML = '';//para limpiar
+    document.getElementById('result_pass').innerText = '';
+    document.getElementById('result_usu').innerText = '';//para limpiar
 
     // validando usuario no vacio
 
@@ -49,6 +50,7 @@ function V1_guardar() {
     }
 
     //validando password no vacio
+
     const rol = document.getElementById('rol').value;
     let password = document.getElementById('password').value;
     if (rol == '1' && password == '') {
@@ -58,15 +60,19 @@ function V1_guardar() {
     //verificando datos
 
     let usuarios = [...l_usu];
+    let flag = 0;
     usuarios.forEach(element => {
         if (element.usuario == usuario && element.password == password && rol == element.rol) {
-            console.log('ingresaste');
+            document.getElementById('v1_jugador').innerText = usuario;
+            flag = 1;
             return;
         }
-        else { document.getElementById('result_pass').innerHTML += '</br>Datos incorrectos' }
+
 
 
     });
+    if (!flag) { document.getElementById('result_pass').innerHTML += '</br>Datos incorrectos' }
+
 
 
 
