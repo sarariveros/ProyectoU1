@@ -1,11 +1,17 @@
 :root {
-    --theme-primary: #e5e5e5;
-    --theme-secondary: #dad7cd;
-    --card-color: #f7c331;
+    --theme-primary: #5585b5;
+    --theme-secondary: #fff;
+    --card-color: #5585b5;
     --text-color: black;
+    --text-color-header: #fff ;
+    --text-color-header-hover: #0e263b ;
     --text-color-inverse:#fffffc;
     --boton:#588157 ;
-    --color-2: #e8db7f;
+    --color-2: #79c2d0;
+    --color-header: #5585b5;
+    --color-footer: var(--theme-primary);
+    --color-text-footer: #fff;
+    --card-juego: #fff;
   }
   
  :root[data-theme="dark"] {
@@ -26,6 +32,52 @@ body{
     background-color: var(--theme-secondary);
 }
 
-.container {
-    min-height: 60vh;
+.principal {
+    min-height: 70vh;
+    width: 70vw;
+    margin: 0 auto;
 }
+
+.navbar-brand{
+    color: var(--text-color-header);
+}
+
+.navbar-brand:hover{
+    color: var(--text-color-header-hover);
+}
+
+.bi-nut{
+    color: var(--text-color-header);
+}
+
+.nav-link{
+    color: var(--text-color-header);
+}
+
+.nav-link:hover{
+    color: var(--text-color-header-hover);
+}
+
+
+.navbar-toggler-icon{
+    background-image: url('/toggle.svg');
+}
+
+footer {
+    background-color: var(--color-footer);
+}
+
+footer .container {
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.copyright{
+    color: var(--color-text-footer);
+}
+
+.copyright a {
+    text-decoration: none;
+    color: var(---color-text-footer);
+}
+

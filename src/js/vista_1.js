@@ -1,84 +1,54 @@
-const l_usu = [
-    {
-        usuario: 'doc1',
-        password: '123abc',
-        rol: '1'
-    },
-    {
-        usuario: 'est1',
-        password: '',
-        rol: '0'
-    },
-]
+import  { navegarA } from "./navegar";
+
 function iniciarVista1() {
-    document.getElementById('result_pass').innerHTML = '';
 
+    const btn_guardar = document.getElementById('btn-guardar')
 
-    const select_rol = document.getElementById('rol');
-    select_rol.addEventListener("change", activarPass);
-    const btn_guardar = document.getElementById('btn-guardar');
     btn_guardar.addEventListener("click", V1_guardar);
 
-
-
 }
-function activarPass() {
-    const password = document.getElementById('password');
-    console.log('en activar');
-    switch (this.value) {
-        case "0": password.disabled = true;
-
-            break;
-
-        case "1": password.disabled = false;
-            break;
-    }
 
 
-}
 function V1_guardar() {
     //limpiando
-    document.getElementById('result_pass').innerText = '';
+
     document.getElementById('result_usu').innerText = '';//para limpiar
 
     // validando usuario no vacio
 
     let usuario = document.getElementById('usuario').value;
+    
+    console.log(usuario)
+
     if (usuario == '') {
         // usuario = 'Anonimo';
         document.getElementById('result_usu').innerHTML = 'Debes ingresar <strong>Usuario</strong>';
+        return;
     }
 
     //validando password no vacio
 
     const rol = document.getElementById('rol').value;
-    let password = document.getElementById('password').value;
-    if (rol == '1' && password == '') {
-        document.getElementById('result_pass').innerHTML = 'Debe ingresar <strong>contraseña</strong> o cambiar a rol <strong>Estudiante</strong>';
 
-    }
-    //verificando datos
+    let nombreHTML = document.getElementById('nombre')
 
-    let usuarios = [...l_usu];
-    let flag = 0;
-    usuarios.forEach(element => {
-        if (element.usuario == usuario && element.password == password && rol == element.rol) {
-            document.getElementById('v1_jugador').innerText = usuario;
-            flag = 1;
-            return;
-        }
+    let jugadorHTML = document.getElementById('v1_jugador')
 
 
+    nombreHTML.innerText = `${rol} : ${usuario}`
 
-    });
-    if (!flag) { document.getElementById('result_pass').innerHTML += '</br>Datos incorrectos' }
+    jugadorHTML.innerText = usuario
 
-
-
-
+    navegarA('vista_2')
 }
 
+export function limpiarUsuario()
+{
+    document.getElementById('nombre').innerText = ""
 
+    document.getElementById('v1_jugador').innerText = ""
+
+}
 
 
 export default iniciarVista1

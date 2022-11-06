@@ -37,12 +37,13 @@
 
 .v1_cartas {
     width: 100%;   
-    min-height: 400px; 
+    min-height: 500px; 
     border-radius: 5px;
     box-shadow: var(--text-color) 0px 2px 5px -1px, var(--text-color) 0px 1px 3px -1px;
     padding: 10px;
     position: relative;
     border-radius: 10px;
+    background-color: var(--card-juego);
 }
 
 .v1_cartas .contenido {
@@ -52,6 +53,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     gap: 5px;
 }
 
@@ -89,8 +91,8 @@
 .carta {
     width: 140px;
     height: 160px;
-    background-color: var(--card-color);    
-    border-radius: 5px;
+    background-color: var(--card-juego);    
+    border-radius: 10px;
     color: white;
     font-size: 30px;
     perspective: 1000px;
@@ -119,6 +121,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -149,17 +152,21 @@
 }
 
 .v1_menu {
-    width: 10%;
+    padding: 2rem 0;
+    width: 25%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
     align-items: center;
-}.v1_menu button{
-    width: 100%;
+}
+
+.v1_menu button{
+    width: 80%;
+    
 }
 
 .v1_boton {
+    height: 60px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #1e1e1e;

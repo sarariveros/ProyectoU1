@@ -1,29 +1,30 @@
 
 <div class="m-5">
 
-
-    <div class="form-group">
+    <h2> Ingresar </h2>
+    <div class="form-group mb-2">
         <label>Usuario: </label>
+
         <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu nombre" required>
+       
         <small class="form-text text-muted" id="result_usu"></small>
+   
     </div>
-    <div class="form-group">
+
+    <div class="form-group mb-2">
         <label>Rol: </label>
         <select class="form-select" id="rol">
-            <option selected value="0">Estudiante</option>
-            <option value="1">Docente</option>
+            <option selected value="Estudiante">Estudiante</option>
+            <option value="Profesor">Docente</option>
         </select>
-
     </div>
 
-    <div class="form-group mb-3 " id="cont_password">
-        <label>Contraseña: </label>
-        <input type="password" class="form-control" id="password" placeholder="*****" disabled>
-        <small class="form-text text-muted" id="result_pass"></small>
-
-    </div>
-
-    <button type="button" class="btn btn-primary" id="btn-guardar"
-        data-dismiss="modal">Ingresar</button>
+    <button 
+        type="button" 
+        class="btn btn-primary" 
+        id="btn-guardar"
+        data-dismiss="modal">
+        Ingresar
+    </button>
 
 </div>
