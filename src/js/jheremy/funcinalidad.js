@@ -1,6 +1,6 @@
 import { tiempo } from "./temporizador"
 
-export function contarFallos(){
+export function contarFallos() {
 
     let contador = document.getElementById('v1_fallos').innerText
 
@@ -14,26 +14,26 @@ export function contarFallos(){
 //variables para el temporizador
 
 
-export function cambiarElEstadoDelJuego(estado){
+export function cambiarElEstadoDelJuego(estado) {
 
     window.estadoDelJuego = estado
 
     tiempo(estado)
 }
 
-export function cambiarTextIniciar(texto){
-    
+export function cambiarTextIniciar(texto) {
+
     document.getElementById('v1_iniciar_o_pausar').innerText = texto
 }
 
-export function resetJuego(){
+export function resetJuego() {
     //para reiniciar el tiempo
-    let tiempo=document.getElementById("v1_tiempo")
-    tiempo.innerHTML="00:00 ";
+    let tiempo = document.getElementById("v1_tiempo")
+    //tiempo.innerHTML="00:00 ";
     cambiarTextIniciar('Iniciar')
     //para reiniciar los fallos
     let fallos = document.getElementById('v1_fallos')
-    fallos.innerHTML= "0"
+    fallos.innerHTML = "0"
 
     cambiarElEstadoDelJuego('espera')
 
@@ -47,7 +47,7 @@ export function resetJuego(){
 
 }
 
-export function cambiarContenidoMascara(mensaje){
+export function cambiarContenidoMascara(mensaje) {
 
     let mascara = document.getElementById('mascara')
 
@@ -57,23 +57,23 @@ export function cambiarContenidoMascara(mensaje){
 
     mascara.style.display = 'flex'
 
-    if(window.estadoDelJuego && window.estadoDelJuego === 'ganado'){
+    if (window.estadoDelJuego && window.estadoDelJuego === 'ganado') {
 
         mascara.classList.add('ganador')
-    }else {
-        
+    } else {
+
         mascara.classList.remove('ganador')
     }
 
-    
+
 
 }
 
-export function resetFallos(){
+export function resetFallos() {
     cambiarInnerText('v1_fallos', '0')
 }
 
-export function resetTiempo(){
+export function resetTiempo() {
     cambiarInnerText('v1_tiempo', '00:00')
 }
 
@@ -84,7 +84,7 @@ export function resetCartas() {
     contenidoDeCartas.innerHTML = ""
 }
 
-function cambiarInnerText(idHTML, text){
+function cambiarInnerText(idHTML, text) {
 
     document.getElementById(idHTML).innerText = text
 }

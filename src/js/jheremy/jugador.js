@@ -1,16 +1,21 @@
-function agregarAlRanking(nombreTag, tiempoTag, nivelTag)
-{
+function agregarAlRanking(nombreTag, tiempoTag, nivelTag) {
     const nombre = document.getElementById(nombreTag).innerText
 
     const tiempo = document.getElementById(tiempoTag).innerText
 
     const nivel = document.getElementById(nivelTag).innerText
 
-    const ranking = JSON.parse(localStorage.getItem('ranking'))?? []
+    localStorage.setItem('jugador', JSON.stringify({ nombre, tiempo, nivel }));
 
-    ranking.push({nombre, tiempo, nivel})
 
-    localStorage.setItem('ranking', JSON.stringify(ranking))
+    // const ranking = []
+
+
+    // const ranking = JSON.parse(localStorage.getItem('ranking')) ?? []
+
+    // ranking.push({ nombre, tiempo, nivel })
+
+    // localStorage.setItem('ranking', JSON.stringify(ranking))
 
 }
 
