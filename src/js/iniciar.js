@@ -6,8 +6,7 @@ import template6 from '../html/vista_6.html?raw'
 import template5 from '../html/vista_5.html?raw'
 
 function iniciar() {
-
-
+    
     // cargamos el html
     document.getElementById('vista_1').innerHTML = template1
     document.getElementById('vista_1').style.display = 'none'
@@ -23,7 +22,8 @@ function iniciar() {
     // modales
     document.getElementById('vista_3').innerHTML = template3
     document.getElementById('vista_6').innerHTML = template6
-
+    
+    
     //click nosotros
 /*     document.getElementById('vista_5').innerHTML = template5
 
