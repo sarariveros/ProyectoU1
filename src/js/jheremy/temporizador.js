@@ -3,41 +3,61 @@ let minutos = 0
 
 var temp = undefined
 
-function temporizador() {
+export function iniciarTemporizador() {
+
+    segundos = 0
+    minutos = 0
+    
     clearInterval(temp)
+
     temp = setInterval(() => {
         segundos++
-        let tiempo = document.getElementById("v1_tiempo")
+        
         if (segundos == 60) {
             segundos = 0
             minutos++
         }
-        tiempo.innerHTML = "0" + minutos + " : " + segundos;
+
+        mostrarTiempo(minutos, segundos)
+    
     }, 1000);
 }
-export function tiempo(estado) {
-    if (estado == 'iniciado') {
-        minutos = 0;
-        segundos = 0
-        temporizador();
-    }
-    if (estado == 'espera') {
-        document.getElementById("v1_tiempo").innerText = '00:10';
 
-    }
+export function continuarTemporizador(){
+    let tiempo = document.getElementById("v1_tiempo").innerText
+
+    let [minutos, segundos] = tiempo.split(':')
+
+    minutos = parseInt(minutos);
+
+    segundos = parseInt(segundos)
+
+    temp = setInterval(() => {
+
+        segundos++
+
+        if (segundos == 60) {
+    
+            segundos = 0
+    
+            minutos++
+        }
+    
+        mostrarTiempo(minutos, segundos)
+
+    }, 1000)
+
+}
+
+export function detenerTemporizador()
+{
+    clearInterval(temp)    
+}
 
 
+function mostrarTiempo(minutos, segundos){
 
-
-
-    // if (estado=="Re-Inicio" || estado=="No-Iniciado"  ) {  
-    //     clearInterval(temp)
-    //     let puntaje=document.getElementById("v4_puntaje")
-    //     puntaje.innerHTML="0"+minutos+" : "+segundos;
-    //     segundos=0
-    //     minutos=0
-
-    // }else{
-    //     temporizador()
-    // }
+    let tiempo = document.getElementById("v1_tiempo")
+ 
+    tiempo.innerText = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
 }
