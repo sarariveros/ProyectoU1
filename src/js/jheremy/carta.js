@@ -12,13 +12,30 @@ const DATA_ATRIBUTO_CARTA = 'data-volteado'
 
 const CARTAS_POR_NIVEL = [8, 10, 12 ]
 
+let esperandoProceso = false  
+
 function clickCarta (id){
+
+    let contenido = document.getElementById("cartas")
+
+    console.log(esperandoProceso)
+    
+    if(esperandoProceso){
+        contenido.style.cursor = 'not-allowed'
+        
+        return;
+    }
+    
+    esperandoProceso = true
+
+    contenido.style.cursor = 'pointer'
 
     voltearCarta(id)
 
     const [existeDosCartasVolteadas, cartas ] = verificarCartasVolteadas()
 
     if(existeDosCartasVolteadas === false){
+        esperandoProceso = false
         return;
     }
 
@@ -26,7 +43,10 @@ function clickCarta (id){
 
         voltearCartasYEliminarEstado(cartas)
             .then(()=> {
+
                 contarFallos()
+
+                esperandoProceso = false
             })
 
         return;
@@ -35,11 +55,16 @@ function clickCarta (id){
     ocultarCartas(cartas)
         .then(() => {
             if(verificarSiTerminoJuego() === false){
+                esperandoProceso = false
                 return;
             }
-        
+
+            esperandoProceso = false
+            
             terminarJuego()
         })
+
+    
 }
 
 function terminarJuego(){
@@ -48,7 +73,7 @@ function terminarJuego(){
 
     mostrarMensajeDeGanador()
 
-    agregarAlRanking('v1_jugador', 'v1_tiempo', 'v1_nivel')
+    agregarAlRanking('v1_jugador', 'v1_tiempo', 'v1_nivel', 'v1_fallos')
 
     cambiarTextIniciar('Iniciar de nuevo')
 
@@ -60,7 +85,11 @@ function terminarJuego(){
 
 function mostrarMensajeDeGanador(){
 
-    cambiarContenidoMascara('Ganaste!')
+    const jugador = document.getElementById('v1_jugador').innerText
+
+    const tiempo = document.getElementById('v1_tiempo').innerText
+
+    cambiarContenidoMascara(`Ganaste ${jugador} en ${tiempo} min !`)
 
 }
 

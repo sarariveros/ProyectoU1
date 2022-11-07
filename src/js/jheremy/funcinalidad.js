@@ -1,4 +1,4 @@
-import { tiempo } from "./temporizador"
+import { detenerTemporizador } from "./temporizador"
 
 export function contarFallos() {
 
@@ -17,23 +17,18 @@ export function contarFallos() {
 export function cambiarElEstadoDelJuego(estado) {
 
     window.estadoDelJuego = estado
-
-    tiempo(estado)
+    
+    console.log(estadoDelJuego)
 }
 
 export function cambiarTextIniciar(texto) {
 
-    document.getElementById('v1_iniciar_o_pausar').innerText = texto
+    document.getElementById('text-button').innerText = texto
 }
 
 export function resetJuego() {
-    //para reiniciar el tiempo
-    let tiempo = document.getElementById("v1_tiempo")
-    //tiempo.innerHTML="00:00 ";
+
     cambiarTextIniciar('Iniciar')
-    //para reiniciar los fallos
-    let fallos = document.getElementById('v1_fallos')
-    fallos.innerHTML = "0"
 
     cambiarElEstadoDelJuego('espera')
 
@@ -55,17 +50,25 @@ export function cambiarContenidoMascara(mensaje) {
 
     mensajeHTML.innerText = mensaje
 
-    mascara.style.display = 'flex'
+    mascara.classList.add('mostrar')
 
-    if (window.estadoDelJuego && window.estadoDelJuego === 'ganado') {
+    const {estadoDelJuego} = window
 
-        mascara.classList.add('ganador')
-    } else {
-
+    if(estadoDelJuego && estadoDelJuego === 'iniciado' || estadoDelJuego === 'espera'){
+        mascara.classList.remove('pause')
         mascara.classList.remove('ganador')
-    }
+    } 
 
+    if (estadoDelJuego && estadoDelJuego === 'ganado') {
 
+        mascara.classList.remove('pause')
+        mascara.classList.add('ganador')
+    } 
+
+    if(estadoDelJuego && estadoDelJuego === 'pausa'){
+        mascara.classList.remove('ganador')
+        mascara.classList.add('pause')
+    } 
 
 }
 
@@ -74,6 +77,9 @@ export function resetFallos() {
 }
 
 export function resetTiempo() {
+    
+    detenerTemporizador()
+    
     cambiarInnerText('v1_tiempo', '00:00')
 }
 
