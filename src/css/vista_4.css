@@ -64,3 +64,18 @@
 .v4_table tr:nth-child(even) {
     background-color: #ddd;
 }
+
+@media screen and (max-width: 320px){
+    #vista_4{
+        width: 100%;
+    }
+
+    #vista_4 .body{
+        padding: 0px;
+    }
+
+    #vista_4 .v4_content {
+        margin: 0;
+        padding: 0;
+    }
+}

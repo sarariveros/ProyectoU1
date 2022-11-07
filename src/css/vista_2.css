@@ -197,8 +197,11 @@ button:hover{
 #v1_iniciar_o_pausar {
     width: 200px;
 }
+.v1_columna{
+    width: 120px;
+}
 
-@media(max-width:700px){
+@media screen and (max-width:768px){
     .v1_juego{
         width: 100%;
         margin: 3%;
@@ -215,8 +218,165 @@ button:hover{
     .pelicula{
         width: 40%;
     }
+
+    .v1_datos{
+        width: 100%;
+        justify-content: space-around;
+        gap: unset;
+        padding: 0 1rem;
+    }   
+
+    .v1_datos .v1_columna{
+        font-size: 1rem;
+        width: 100px;
+        text-align: center;
+    }
+
+    .v1_datos .v1_columna:nth-child(3){
+        text-align: right;
+    }
+
+    .v1_contenedor{
+        gap: unset;
+    }
+
+    .v1_cartas .contenido{
+        padding: 0px;
+    }
+
+    .carta{
+        width: 120px;
+        height: 140px;
+    }
+
+    .v1_boton{
+        height: 46px;
+        width: 100%;
+    }
+
+    .v1_menu{
+        width: 38%;
+        gap: 0px;
+    }
+
+    .v1_juego {
+        margin-bottom: 0px;
+    }
 }
 
-.v1_columna{
-    width: 120px;
+@media screen and (max-width: 425px){
+    .v1_datos{
+        width: 100%;
+        justify-content: space-between;
+        gap: 3px;
+        margin-bottom: 5px;
+    }   
+
+    .v1_datos .v1_columna{
+        font-size: 14px;
+        width: 100px;
+        text-align: center;
+    }
+
+    .v1_datos .v1_columna:nth-child(3){
+        text-align: right;
+    }
+
+    .v1_juego{
+        margin: 0;
+    }
+
+    .mascara  .mensaje {
+        font-size: 20px;
+    }
+
+    .v1_cartas .contenido{
+        padding: 0px;
+    }
+
+    .carta{
+        width: 100px;
+        height: 130px;
+    }
+
+    .v1_boton{
+        height: 46px;
+        width: 100%;
+    }
+
+    .v1_menu{
+        width: 70%;
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .v1_contenedor{
+        padding: .5rem;
+    }
+
+    .v1_datos{
+        width: 100%;
+        justify-content: space-between;
+        gap: 3px;
+        margin-bottom: 5px;
+    }
+
+    .v1_datos .v1_columna{
+        font-size: 12px;
+        width: 80px;
+        text-align: center;
+    }
+
+    .v1_datos .v1_columna:nth-child(3){
+        text-align: right;
+    }
+
+    .v1_datos .span{
+        font-size: 12px;
+    }
+
+    .v1_fila {
+        width: 100%;
+        justify-content: unset;
+    }
+
+    .v1_juego{
+        margin: 0;
+    }
+
+    .mascara  .mensaje {
+        font-size: 20px;
+    }
+
+    .v1_boton{
+        height: 46px;
+        width: 100%;
+    }
+
+    .v1_menu{
+        width: 78%;
+        gap: 0px;
+    }
+
+    .v1_cartas .contenido{
+        padding: 0px;
+    }
+
+    .carta{
+        width: 115px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .v1_menu{
+        width: 90%;
+        gap: 0px;
+    }
+
+    .mascara  .mensaje {
+        font-size: 16px;
+    }
 }

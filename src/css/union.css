@@ -7,3 +7,14 @@
     width: 60%;
     margin: 0 auto;
 }
+
+#vista_1 h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+
+    #vista_1{
+        width: 100%;
+    }
+}
