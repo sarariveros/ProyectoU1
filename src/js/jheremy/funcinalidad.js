@@ -18,7 +18,6 @@ export function cambiarElEstadoDelJuego(estado) {
 
     window.estadoDelJuego = estado
     
-    console.log(estadoDelJuego)
 }
 
 export function cambiarTextIniciar(texto) {

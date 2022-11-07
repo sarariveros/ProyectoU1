@@ -23,7 +23,7 @@ function iniciarJuego(textoBoton){
 
             detenerTemporizador()
 
-            cambiarContenidoMascara('El juego esta en pausa')
+            cambiarContenidoMascara('El juego está en pausa')
 
             cambiarTextIniciar('Continuar')
 

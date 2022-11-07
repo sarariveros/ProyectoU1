@@ -18,8 +18,6 @@ function V1_guardar() {
 
     let usuario = document.getElementById('usuario').value;
     
-    console.log(usuario)
-
     if (usuario == '') {
         // usuario = 'Anonimo';
         document.getElementById('result_usu').innerHTML = 'Debes ingresar <strong>Usuario</strong>';

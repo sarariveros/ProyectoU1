@@ -128,7 +128,6 @@ function actualizarR(nivelT) {
     //guardando lista segun el nivel
     let l_nivel = [];
     l_ranking.forEach(element => {
-        // console.log(element.usuario, '--', element.tiempo);
         if (element.nivel == nivelT) { l_nivel.push(element); }
     });
 
@@ -138,7 +137,8 @@ function actualizarR(nivelT) {
     //actualizando datos tabla ranking
     const body = document.getElementsByTagName('tbody').item(0).children;
     let filas = [].slice.call(body);
-    // console.log(filas);
+
+    
     for (let i = 0; i < filas.length; i++) {
         filas[i].children.item(2).innerHTML = l_nivel[i].usuario;
         filas[i].children.item(3).innerHTML = convertirTiempoMinutos(l_nivel[i].tiempo);

@@ -18,8 +18,6 @@ function clickCarta (id){
 
     let contenido = document.getElementById("cartas")
 
-    console.log(esperandoProceso)
-    
     if(esperandoProceso){
         contenido.style.cursor = 'not-allowed'
         
@@ -124,7 +122,7 @@ function voltearCartasYEliminarEstado (cartas){
             }
 
             resolve('cartas-volteadas')
-        }, 1000)
+        }, 800)
 
     })
 
@@ -147,7 +145,7 @@ function ocultarCartas(cartas){
 
             resolve('ocultar-carta-completa')
     
-        },1000)
+        },800)
 
     })
 
