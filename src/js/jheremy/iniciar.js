@@ -1,8 +1,55 @@
 import clickCarta from "./carta"
-import { cambiarElEstadoDelJuego, cambiarTextIniciar, resetFallos, resetJuego, resetTiempo } from "./funcinalidad"
+import { cambiarElEstadoDelJuego, cambiarTextIniciar, resetFallos, resetTiempo } from "./funcinalidad"
 import { obtenerDataPorNivel} from './data'
+import {cambiarContenidoMascara} from './funcinalidad'
+import {continuarTemporizador, detenerTemporizador, iniciarTemporizador} from './temporizador'
 
-function iniciarJuego(){
+function iniciarJuego(textoBoton){
+
+    const valorDeBoton = document.getElementById(textoBoton).innerText
+
+    switch (valorDeBoton.trim()) {
+        case 'Iniciar de nuevo':
+        case 'Iniciar':
+
+            iniciar()
+            
+            iniciarTemporizador()
+
+            break;
+        case 'Pausar':
+            
+            cambiarElEstadoDelJuego('pausa')
+
+            detenerTemporizador()
+
+            cambiarContenidoMascara('El juego esta en pausa')
+
+            cambiarTextIniciar('Continuar')
+
+            break;
+
+        case 'Continuar':
+
+            cambiarElEstadoDelJuego('iniciado')
+
+            ocultarMascara()
+
+            continuarTemporizador()
+
+            cambiarTextIniciar('Pausar')
+
+            break;
+        default:
+
+            break;
+    }
+
+
+
+}
+
+function iniciar(){
 
     ocultarMascara()
 
@@ -17,9 +64,6 @@ function iniciarJuego(){
     resetTiempo()
 
     resetFallos()
-
-    fetch('https://api.lorem.space/image/face?w=150')
-        .then(x => console.log(x))
 }
 
 
@@ -103,7 +147,7 @@ function generarAleatorio(items){
 function ocultarMascara(){
     let mascara = document.getElementById('mascara')
 
-    mascara.style.display = 'none'
+    mascara.classList.remove('mostrar')
 
 }
 

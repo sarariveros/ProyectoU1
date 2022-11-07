@@ -18,9 +18,10 @@
         <div class="v1_juego ">
 
             <div class="v1_cartas">
-                <div class="mascara" id="mascara">
+                <div class="mascara mostrar" id="mascara">
                     <p class="mensaje">Click en Iniciar!</p>
                 </div>
+                
                 <div class="contenido" id="cartas"></div>
             </div>
 
@@ -28,9 +29,11 @@
                 <button 
                     class="v1_boton" 
                     id="v1_iniciar_o_pausar" 
-                    onclick="handleIniciar()">
-                    <i class="bi bi-controller"></i>
-                    Iniciar
+                    onclick="handleIniciar('text-button')">
+
+                    <i id="icon-button" class="bi bi-controller"></i>
+
+                    <span id="text-button">Iniciar</span>
                 </button>
             </div>
 

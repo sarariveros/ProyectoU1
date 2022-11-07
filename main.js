@@ -3,7 +3,6 @@ import './src/css/union.css'
 
 // como modulo
 
-import iniciarVista4 from './src/js/vista_4'
 import iniciarVista1 from './src/js/vista_1'
 import iniciar from './src/js/iniciar' // punto de entrada 
 import { iniciarJuego, resetJuego } from './src/js/jheremy'
@@ -27,7 +26,6 @@ setDarkMode()
 setLigthMode()
 playAudio()
 
-iniciarVista4();
 iniciarVista1();
 
 
