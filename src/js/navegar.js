@@ -1,6 +1,7 @@
 import { detenerTemporizador } from "./jheremy/temporizador";
 import { limpiarUsuario } from "./vista_1";
 import mostrarRanking from './vista_4'
+import { resetJuego } from "./jheremy/funcinalidad";
 
 const sections = ['vista_1', 'vista_2', 'vista_5', 'vista_4']
 
@@ -12,6 +13,11 @@ function navegar (ruta){
         return
     }
     
+    if(ruta ==='vista_5'){
+        navegarA('vista_5')
+        return;
+    }
+
     if(protegerIngreso())
     {
         navegarA('vista_1')
@@ -24,6 +30,8 @@ function navegar (ruta){
     if(ruta === 'vista_1' && protegerIngreso() == false)
     {
         limpiarUsuario()
+
+        resetJuego()
     }
 
     if(ruta ==='vista_4'){
