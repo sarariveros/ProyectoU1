@@ -1,16 +1,20 @@
+import { detenerTemporizador } from "./jheremy/temporizador";
 import { limpiarUsuario } from "./vista_1";
+import mostrarRanking from './vista_4'
 
 const sections = ['vista_1', 'vista_2', 'vista_5', 'vista_4']
 
 function navegar (ruta){
 
-    console.log(protegerIngreso())
+    if(window.estadoDelJuego && window.estadoDelJuego == 'iniciado'){
 
+        alert('No puede navegar hasta terminar el juego')
+        return
+    }
+    
     if(protegerIngreso())
     {
-
         navegarA('vista_1')
-
         return;
     }
 
@@ -20,6 +24,16 @@ function navegar (ruta){
     if(ruta === 'vista_1' && protegerIngreso() == false)
     {
         limpiarUsuario()
+    }
+
+    if(ruta ==='vista_4'){
+        
+        mostrarRanking()
+    }
+
+    if(ruta != 'vista_2'){
+
+        detenerTemporizador()
     }
 }
 
