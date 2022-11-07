@@ -2,10 +2,13 @@ import { resetJuego } from "./jheremy/funcinalidad"
 
 function cambiar() {
     const botonOscuro=document.getElementById("btn-oscuro")
+
     botonOscuro.addEventListener("click",()=>{
         document.body.style="background:red"
-    const tiempo=document.getElementById("v1_tiempo")
-    tiempo.style="color:red"
+
+        const tiempo=document.getElementById("v1_tiempo")
+
+        tiempo.style="color:red"
     })
     
 }
@@ -60,8 +63,15 @@ function cambiarNivel3() {
 
 //funciones
 function setDarkMode() {
+
+    const darkModeBtn=document.getElementById("btn-oscuro");
     const lightModeBtn=document.getElementById("btn-claro");
+
     lightModeBtn.addEventListener("click",()=>{
+        
+        lightModeBtn.classList.add('active')
+        darkModeBtn.classList.remove('active')
+        
         document.documentElement.setAttribute("data-theme","light")
 
     });
@@ -69,8 +79,15 @@ function setDarkMode() {
     
 }
 function setLigthMode() {
+
     const darkModeBtn=document.getElementById("btn-oscuro");
+    const lightModeBtn=document.getElementById("btn-claro");
+
     darkModeBtn.addEventListener("click",()=>{
+
+        darkModeBtn.classList.add('active')
+        lightModeBtn.classList.remove('active')
+
         document.documentElement.setAttribute("data-theme","dark")
 
     });

@@ -21,23 +21,30 @@
    font-weight: bold;
     
 }
+
 button{
     margin:5px 20px;
-    
-
 }
+
 .desing .btn-oscuro:hover{
     background-color: transparent;
     color: black;
 }
+
 .btn-continue{
     margin: auto;
 
 }
+
 button:disabled{
     color: red;
     border: 1px solid red;
 }
+
+.btn-outline-dark{
+    color: var(--color-button-theme);
+}
+
 /* 
 para la musica */
 .switch-container{
