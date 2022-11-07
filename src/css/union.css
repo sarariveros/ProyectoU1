@@ -1,5 +1,9 @@
-@import url('./vista_1.css');
 @import url('./vista_2.css');
 @import url('./vista_3.css');
 @import url('./vista_4.css');
 @import url('./vista_5.css');
+
+#vista_1{
+    width: 60%;
+    margin: 0 auto;
+}

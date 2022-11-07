@@ -3,15 +3,20 @@
     --theme-secondary: #fff;
     --card-color: #5585b5;
     --text-color: black;
+    --text-color-juego: #fff;
     --text-color-header: #fff ;
     --text-color-header-hover: #0e263b ;
     --text-color-inverse:#fffffc;
     --boton:#588157 ;
-    --color-2: #79c2d0;
     --color-header: #5585b5;
     --color-footer: var(--theme-primary);
     --color-text-footer: #fff;
+    --bg-button: #79c2d0;
+    --color-button: #fff;
+    --color-button-hover: #fffffc;
+    --text-button-hover: #5585b5;
     --card-juego: #fff;
+    --color-button-theme: #212529;
   }
   
  :root[data-theme="dark"] {
@@ -20,7 +25,10 @@
     --card-color: #df9a57;
     --text-color: #e5e5e5;
     --text-color-inverse:#0c1821;
-    --boton:#185339; 
+    --boton:#185339;
+    --color-button: #0c1821;
+    --color-button-hover: #bbcfdd;
+    --color-button-theme: #fff;
     color-scheme: dark; 
 }
 
@@ -33,8 +41,8 @@ body{
 }
 
 .principal {
-    min-height: 70vh;
-    width: 70vw;
+    min-height: 80vh;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -52,6 +60,7 @@ body{
 
 .nav-link{
     color: var(--text-color-header);
+    cursor: pointer;
 }
 
 .nav-link:hover{
