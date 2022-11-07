@@ -1,14 +1,14 @@
 .v1_contenedor {
-    width: 95%;
-    margin: 20px auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     border-radius: 5px;
-    
-    padding: 10px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: var(--theme-primary);
-    color: var(--text-color);
+    color: var(--text-color-juego);
 }
 
 .v1_jugador {
@@ -20,7 +20,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
+
 
 .v1_fila {
     display: flex;
@@ -29,7 +31,7 @@
 }
 
 .v1_juego {
-    width: 70%;
+    width: 73%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,6 +46,7 @@
     position: relative;
     border-radius: 10px;
     background-color: var(--card-juego);
+    overflow: hidden;
 }
 
 .v1_cartas .contenido {
@@ -55,6 +58,7 @@
     align-items: center;
     padding: 1rem;
     gap: 5px;
+   
 }
 
 .mascara {
@@ -69,6 +73,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform .5s ease-in-out, opacity .3s linear;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mascara .mensaje {
@@ -88,6 +100,14 @@
     background-color: #297fb988;
 }
 
+.pause {
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/18/17/38/time-4559789_960_720.png');
+}
+
+.pause .mensaje {
+    background-color: #297fb988;
+}
+
 .carta {
     width: 140px;
     height: 160px;
@@ -98,11 +118,6 @@
     perspective: 1000px;
     cursor: pointer;
 }
-
-
-/* .carta:hover .carta-inner {
-    transform: rotateY(180deg);
-} */
 
 .carta-inner-selecciondo {
     transform: rotateY(180deg);
@@ -152,8 +167,7 @@
 }
 
 .v1_menu {
-    padding: 2rem 0;
-    width: 25%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -161,8 +175,7 @@
 }
 
 .v1_menu button{
-    width: 80%;
-    
+    width: 100%;
 }
 
 .v1_boton {
@@ -170,18 +183,21 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #1e1e1e;
-    background-color: var(--color-2, #2980b9);
+    background-color: var(--bg-button);
+    color: var(--color-button)
+}
+
+button:hover{
+    background-color:var(--color-button-hover);
+    color: var(--text-button-hover);
+    font-weight: 600;
+    transition-duration: .3s;
 }
 
 #v1_iniciar_o_pausar {
     width: 200px;
 }
-button:hover{
-    background-color:var(--card-color);
-    font-weight: 600;
-    transition-duration: .3s;
-    
-}
+
 @media(max-width:700px){
     .v1_juego{
         width: 100%;
@@ -199,4 +215,8 @@ button:hover{
     .pelicula{
         width: 40%;
     }
+}
+
+.v1_columna{
+    width: 120px;
 }
